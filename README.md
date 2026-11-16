@@ -36,7 +36,7 @@
 
 ## 2. Requisitos previos
 
-- Un hipervisor: VirtualBox, VMware Workstation/Player o similar.
+- Un hipervisor: VirtualBox
 - ISO de **Ubuntu Server 24.04 LTS** ([ubuntu.com/download/server](https://ubuntu.com/download/server)).
 - Conocimientos básicos de terminal Linux.
 - Conexión a Internet en la máquina virtual.
@@ -52,7 +52,7 @@
 
 > **Nota sobre versiones:** esta práctica usa Moodle 4.5 LTS, compatible con PHP 8.3 (el que trae Ubuntu 24.04). Si usas una versión más reciente de Moodle, comprueba antes los requisitos de PHP y base de datos en [docs.moodle.org](https://docs.moodle.org), y ten en cuenta que a partir de Moodle 5.0 el directorio web (`DocumentRoot`) pasa a ser la subcarpeta `public`.
 
-## 3. Parte A: Preparación de la máquina virtual
+## 3. Parte A: Preparación de la máquina virtual. Instalación de la pila LAMP.
 
 1. Crea la VM con los recursos indicados e instala Ubuntu Server 24.04. Marca la opción **Install OpenSSH server** durante la instalación.
 2. Inicia sesión y actualiza el sistema:
@@ -110,16 +110,16 @@ sudo apt install -y mariadb-server
 sudo mysql_secure_installation
 ```
 
-2. Crea la base de datos y el usuario de Moodle (**cambia la contraseña por una propia**):
+2. Crea la base de datos (moodleDB) y el usuario de Moodle (moodleTUNOMBRE) (**cambia la contraseña por una propia y moodleTUNOMBRE con los datos correspondientes**):
 
 ```bash
 sudo mysql
 ```
 
 ```sql
-CREATE DATABASE moodle DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-CREATE USER 'moodleuser'@'localhost' IDENTIFIED BY 'CambiaEstaClave123!';
-GRANT ALL PRIVILEGES ON moodle.* TO 'moodleuser'@'localhost';
+CREATE DATABASE moodleDB DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE USER 'moodleTUNOMBRE'@'localhost' IDENTIFIED BY 'CambiaEstaClave123!';
+GRANT ALL PRIVILEGES ON moodleDB.* TO 'moodleTUNOMBRE'@'localhost';
 FLUSH PRIVILEGES;
 EXIT;
 ```
@@ -127,7 +127,7 @@ EXIT;
 3. Comprueba que el usuario puede conectarse:
 
 ```bash
-mysql -u moodleuser -p -e "SHOW DATABASES;"
+mysql -u moodleTUNOMBRE -p -e "SHOW DATABASES;"
 ```
 
 📸 **Captura 3:** resultado del comando anterior mostrando la base de datos `moodle`.
@@ -199,7 +199,7 @@ sudo chmod 777 /var/www/moodle
 2. Abre `http://IP_DE_LA_VM` en el navegador y sigue el asistente:
    - Idioma: Español.
    - Rutas: directorio de datos `/var/moodledata`.
-   - Base de datos: **MariaDB (mariadb/native)**, servidor `localhost`, nombre `moodle`, usuario `moodleuser` y su contraseña.
+   - Base de datos: **MariaDB (mariadb/native)**, servidor `localhost`, nombre `moodleDB`, usuario `moodleuserTUNOMBRE` y su contraseña.
    - Acepta la licencia y espera a la comprobación del servidor. Todos los requisitos deben aparecer en verde.
    - Crea la cuenta de administrador y completa el nombre del sitio.
 
@@ -219,7 +219,7 @@ sudo -u www-data /usr/bin/php admin/cli/install.php \
   --wwwroot="http://IP_DE_LA_VM" \
   --dataroot="/var/moodledata" \
   --dbtype=mariadb \
-  --dbname=moodle --dbuser=moodleuser --dbpass='CambiaEstaClave123!' \
+  --dbname=moodleDB --dbuser=moodleTUNOMBRE --dbpass='CambiaEstaClave123!' \
   --fullname="Moodle Práctica" --shortname="MoodlePr" \
   --adminuser=admin --adminpass='Admin_2026!' --adminemail=admin@ejemplo.local \
   --agree-license --non-interactive
@@ -230,7 +230,7 @@ sudo -u www-data /usr/bin/php admin/cli/install.php \
 📸 **Captura 4:** pantalla de comprobación de requisitos (o salida final del instalador CLI).  
 📸 **Captura 5:** panel principal de Moodle con la sesión de administrador iniciada.
 
-## 8. Parte F: Tareas programadas (cron)
+## 8. Parte F: Tareas programadas (cron) OPTATIVO
 
 Moodle necesita ejecutar su cron cada minuto para enviar correos, procesar tareas y mantener el sitio:
 
@@ -297,25 +297,5 @@ Entrega un informe en PDF que incluya:
 4. ¿Qué ventajas aportaría usar HTTPS? Indica los pasos generales para activarlo con Let's Encrypt.
 5. Propón una estrategia de copias de seguridad para esta instalación (qué elementos hay que respaldar y con qué frecuencia).
 
-## 13. Ampliaciones opcionales
-
-- Configurar HTTPS con un certificado autofirmado o con Certbot.
-- Instalar y configurar **Redis** u **OPcache** para mejorar el rendimiento.
-- Configurar el envío de correo saliente (SMTP).
-- Automatizar toda la instalación con un script de Bash.
-- Probar la actualización de Moodle a una versión menor mediante `git pull`.
-
-## 14. Criterios de evaluación sugeridos
-
-| Criterio | Peso |
-|---|---|
-| Instalación completa y funcional | 40 % |
-| Configuración correcta de permisos y seguridad | 20 % |
-| Cron y verificaciones | 15 % |
-| Calidad del informe y capturas | 15 % |
-| Preguntas de reflexión | 10 % |
-
-## 15. Licencia
-
-Este material se distribuye bajo la licencia [Creative Commons Atribución 4.0 Internacional (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.es). Puedes compartirlo y adaptarlo citando la autoría.# moodle
+Puedes compartirlo y adaptarlo citando la autoría.# moodle
 Instalación de un LMS Moodle
