@@ -19,13 +19,14 @@
 6. [Parte D: Descarga de Moodle y directorios](#6-parte-d-descarga-de-moodle-y-directorios)
 7. [Parte E: Instalación de Moodle](#7-parte-e-instalación-de-moodle)
 9. [Parte F: Configurar un entorno de aprendizaje funcional desde cero:](##8-Parte-F:-Configurar-un-entorno-de-aprendizaje-funcional-desde-cero).
-10. [Parte G: Verificación y pruebas](#9-parte-g-verificación-y-pruebas)
-11. [Solución de problemas frecuentes](#10-solución-de-problemas-frecuentes)
-12. [Entregables](#11-entregables)
-13. [Preguntas de reflexión](#12-preguntas-de-reflexión)
-14. [Ampliaciones opcionales](#13-ampliaciones-opcionales)
-15. [Criterios de evaluación sugeridos](#14-criterios-de-evaluación-sugeridos)
-16. [Licencia](#15-licencia)
+10. (Parte F: Configurar un entorno de aprendizaje funcional desde cero:)
+11. [Parte G: Verificación y pruebas](#9-parte-g-verificación-y-pruebas)
+12. [Solución de problemas frecuentes](#10-solución-de-problemas-frecuentes)
+13. [Entregables](#11-entregables)
+14. [Preguntas de reflexión](#12-preguntas-de-reflexión)
+15. [Ampliaciones opcionales](#13-ampliaciones-opcionales)
+16. [Criterios de evaluación sugeridos](#14-criterios-de-evaluación-sugeridos)
+17. [Licencia](#15-licencia)
 
 ## 1. Objetivos
 
