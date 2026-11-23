@@ -18,7 +18,7 @@
 5. [Parte C: Instalación y configuración de MariaDB](#5-parte-c-instalación-y-configuración-de-mariadb)
 6. [Parte D: Descarga de Moodle y directorios](#6-parte-d-descarga-de-moodle-y-directorios)
 7. [Parte E: Instalación de Moodle](#7-parte-e-instalación-de-moodle)
-8. [Parte F: Tareas programadas (cron)](#8-parte-f-tareas-programadas-cron)
+8. [Parte F: Configurar un entorno de aprendizaje funcional desde cero:]
 9. [Parte G: Verificación y pruebas](#9-parte-g-verificación-y-pruebas)
 10. [Solución de problemas frecuentes](#10-solución-de-problemas-frecuentes)
 11. [Entregables](#11-entregables)
@@ -230,29 +230,36 @@ sudo -u www-data /usr/bin/php admin/cli/install.php \
 📸 **Captura 4:** pantalla de comprobación de requisitos (o salida final del instalador CLI).  
 📸 **Captura 5:** panel principal de Moodle con la sesión de administrador iniciada.
 
-## 8. Parte F: Tareas programadas (cron) OPTATIVO
+## 8. Parte F: Configurar un entorno de aprendizaje funcional desde cero:
+1. **Dar de alta el nuevo curso:Administración del sitio.** Dirígete a Administración del sitio > Cursos > Administrar cursos y categorías. En la columna derecha, haz clic en Crear nuevo curso y rellena los datos básicos:
+   Nombre completo del curso: Introducción a la Administración de Sistemas (o el que prefieras).
+   Nombre corto del curso: IAS-2026.
+   Visibilidad del curso: Mostrar
+   Fecha de inicio y finalización: Ajusta el inicio a hoy y desactiva la fecha de finalización (o ponla a 3 meses vista).
+   Formato: Formato de temas
+   Número de secciones: Selecciona 3 (si tu versión de Moodle crea 4 por defecto, podrás borrar la cuarta directamente desde la página principal del curso).
+Haz clic en Guardar y volver o Guardar y mostrar.
+2. **Crea los temas.** 
+Activa el interruptor Modo de edición en la esquina superior derecha. Haz clic en el icono del lápiz junto a cada sección, escribe el nuevo nombre y pulsa Enter para guardar:
 
-Moodle necesita ejecutar su cron cada minuto para enviar correos, procesar tareas y mantener el sitio:
+Tema 1: Unidad 1: Conceptos básicos y arquitectura
+Tema 2: Unidad 2: Gestión de usuarios y permisos
+Tema 3: Unidad 3: Seguridad y copias de respaldo
 
-```bash
-sudo crontab -u www-data -e
-```
+Añade algún recurso en cada tema (url, youtube, página, fichero, tarea...)
 
-Añade la línea:
+3. **Importar los usuarios en Moodle.**
+Inicia sesión con tu cuenta de Administrador. Ve al menú superior o lateral Administración del sitio > Usuarios > Cuentas > Subir usuarios. Arrastra el archivo users.csv (subida en GitHub) al recuadro de carga, asegúrate de que el delimitador esté en , y haz clic en Subir usuarios. Revisa la tabla de previsualización y pulsa de nuevo Subir usuarios al final de la página.
+Verification: Moodle muestra un resumen indicando "Usuarios creados: 11" y "Errores: 0".
 
-```
-* * * * * /usr/bin/php /var/www/moodle/admin/cli/cron.php > /dev/null 2>&1
-```
+4. **Matriculación de los usuarios en Moodle.**
+Entra en el curso recién creado (IAS-2026) y haz clic en la pestaña Participantes en el menú secundario superior. Pulsa el botón Matricular usuarios.Verification: Se abre una ventana emergente titulada Matricular usuarios.2.Matricular al profesor:Asignación de rol.En el buscador Seleccionar usuarios, escribe Carlos Mendoza (profesor1) y selecciónalo. En el desplegable Asignar rol, elige Profesor (con permisos de edición). Pulsa Matricular usuarios.Verification: Carlos Mendoza aparece en la lista de participantes con el rol Profesor y estado Activo.3.Matricular a los 10 alumnos:Matriculación en bloque.Vuelve a pulsar Matricular usuarios. En el buscador Seleccionar usuarios, busca y selecciona uno a uno a los 10 alumnos (alumno01 hasta alumno10) para que todos queden añadidos en la barra de selección superior. Comprueba que en Asignar rol esté marcado Estudiante y haz clic en Matricular usuarios seleccionados.Verification: En la pestaña Participantes se listan un total de 11 usuarios activos: 1 profesor y 10 estudiantes.
 
-Verifica que funciona ejecutándolo a mano:
+Captura pantalla de:
 
-```bash
-sudo -u www-data /usr/bin/php /var/www/moodle/admin/cli/cron.php
-```
-
-En Moodle, entra en **Administración del sitio > Servidor > Tareas > Tareas programadas** y comprueba que las tareas se ejecutan sin errores.
-
-📸 **Captura 6:** listado de tareas programadas con sus últimas ejecuciones.
+La tabla de Examinar lista de usuarios mostrando los 11 usuarios dados de alta.
+La página principal del curso mostrando los 3 temas renombrados.
+La pestaña Participantes del curso donde se aprecie el contador de 11 participantes con sus respectivos roles (Profesor y Estudiante).
 
 ## 9. Parte G: Verificación y pruebas
 
