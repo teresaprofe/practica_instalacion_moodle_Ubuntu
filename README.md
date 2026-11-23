@@ -18,7 +18,7 @@
 5. [Parte C: Instalación y configuración de MariaDB](#5-parte-c-instalación-y-configuración-de-mariadb)
 6. [Parte D: Descarga de Moodle y directorios](#6-parte-d-descarga-de-moodle-y-directorios)
 7. [Parte E: Instalación de Moodle](#7-parte-e-instalación-de-moodle)
-8. [Parte F: Configurar un entorno de aprendizaje funcional desde cero:](#8-parte-f-configurar-un-entorno-de-aprendizaje-funcional-desde-cero)
+8. [Parte F: Configurar un entorno de aprendizaje funcional desde cero](#8-parte-f-configurar-un-entorno-de-aprendizaje-funcional-desde-cero)
 9. [Parte G: Verificación y pruebas](#9-parte-g-verificación-y-pruebas)
 10. [Solución de problemas frecuentes](#10-solución-de-problemas-frecuentes)
 11. [Entregables](#11-entregables)
@@ -289,8 +289,10 @@ systemctl status apache2 mariadb --no-pager
 
 ## 11. Entregables
 
-Entrega un informe en PDF que incluya:
+Entrega un informe en PDF que incluya los siguientes apartados con su índice y numeraciones correctas:
 
+- Portada con tu nombre, título, curso, fecha.
+- Introducción donde expliques el objetivo de la práctica.
 - Las 7 capturas indicadas, con una breve explicación de cada una.
 - Las versiones instaladas de Ubuntu, Apache, PHP, MariaDB y Moodle.
 - Una descripción de los problemas encontrados y cómo los resolviste.
@@ -301,8 +303,8 @@ Entrega un informe en PDF que incluya:
 1. ¿Por qué el directorio `moodledata` debe estar fuera del directorio web?
 2. ¿Por qué se recomienda que el código de Moodle no sea escribible por el usuario del servidor web una vez instalado?
 3. ¿Qué función cumple el cron en Moodle y qué ocurre si no está configurado?
-4. ¿Qué ventajas aportaría usar HTTPS? Indica los pasos generales para activarlo con Let's Encrypt.
-5. Propón una estrategia de copias de seguridad para esta instalación (qué elementos hay que respaldar y con qué frecuencia).
+4. ¿Qué has aprendido con esta práctica?
+
 
 Puedes compartirlo y adaptarlo citando la autoría.# moodle
 Instalación de un LMS Moodle
