@@ -18,7 +18,7 @@
 5. [Parte C: Instalación y configuración de MariaDB](#5-parte-c-instalación-y-configuración-de-mariadb)
 6. [Parte D: Descarga de Moodle y directorios](#6-parte-d-descarga-de-moodle-y-directorios)
 7. [Parte E: Instalación de Moodle](#7-parte-e-instalación-de-moodle)
-8. [Parte F: Configurar un entorno de aprendizaje funcional desde cero:](##8-Parte-F:-Configurar-un-entorno-de-aprendizaje-funcional-desde-cero).
+8. [Parte F: Configurar un entorno de aprendizaje funcional desde cero:](#8-parte-f-configurar-un-entorno-de-aprendizaje-funcional-desde-cero)
 9. [Parte G: Verificación y pruebas](#9-parte-g-verificación-y-pruebas)
 10. [Solución de problemas frecuentes](#10-solución-de-problemas-frecuentes)
 11. [Entregables](#11-entregables)
