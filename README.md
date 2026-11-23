@@ -255,7 +255,7 @@ Verification: Moodle muestra un resumen indicando "Usuarios creados: 11" y "Erro
 4. **Matriculación de los usuarios en Moodle.**
 Entra en el curso recién creado (IAS-2026) y haz clic en la pestaña Participantes en el menú secundario superior. Pulsa el botón Matricular usuarios.Verification: Se abre una ventana emergente titulada Matricular usuarios.2.Matricular al profesor:Asignación de rol.En el buscador Seleccionar usuarios, escribe Carlos Mendoza (profesor1) y selecciónalo. En el desplegable Asignar rol, elige Profesor (con permisos de edición). Pulsa Matricular usuarios.Verification: Carlos Mendoza aparece en la lista de participantes con el rol Profesor y estado Activo.3.Matricular a los 10 alumnos:Matriculación en bloque.Vuelve a pulsar Matricular usuarios. En el buscador Seleccionar usuarios, busca y selecciona uno a uno a los 10 alumnos (alumno01 hasta alumno10) para que todos queden añadidos en la barra de selección superior. Comprueba que en Asignar rol esté marcado Estudiante y haz clic en Matricular usuarios seleccionados.Verification: En la pestaña Participantes se listan un total de 11 usuarios activos: 1 profesor y 10 estudiantes.
 
-📸 **Captura 8:**
+📸 **Captura 7:**
 
 La tabla de Examinar lista de usuarios mostrando los 11 usuarios dados de alta.
 La página principal del curso mostrando los 3 temas renombrados.
@@ -291,7 +291,7 @@ systemctl status apache2 mariadb --no-pager
 
 Entrega un informe en PDF que incluya:
 
-- Las 6 capturas indicadas, con una breve explicación de cada una.
+- Las 7 capturas indicadas, con una breve explicación de cada una.
 - Las versiones instaladas de Ubuntu, Apache, PHP, MariaDB y Moodle.
 - Una descripción de los problemas encontrados y cómo los resolviste.
 - Las respuestas a las preguntas de la sección siguiente.
