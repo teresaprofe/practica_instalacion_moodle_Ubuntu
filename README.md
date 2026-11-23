@@ -18,7 +18,7 @@
 5. [Parte C: Instalación y configuración de MariaDB](#5-parte-c-instalación-y-configuración-de-mariadb)
 6. [Parte D: Descarga de Moodle y directorios](#6-parte-d-descarga-de-moodle-y-directorios)
 7. [Parte E: Instalación de Moodle](#7-parte-e-instalación-de-moodle)
-8. [Parte F: Configurar un entorno de aprendizaje funcional desde cero:]
+8. [Parte F: Configurar un entorno de aprendizaje funcional desde cero:] (#8.Parte F: Configurar un entorno de aprendizaje funcional desde cero).
 9. [Parte G: Verificación y pruebas](#9-parte-g-verificación-y-pruebas)
 10. [Solución de problemas frecuentes](#10-solución-de-problemas-frecuentes)
 11. [Entregables](#11-entregables)
@@ -255,7 +255,7 @@ Verification: Moodle muestra un resumen indicando "Usuarios creados: 11" y "Erro
 4. **Matriculación de los usuarios en Moodle.**
 Entra en el curso recién creado (IAS-2026) y haz clic en la pestaña Participantes en el menú secundario superior. Pulsa el botón Matricular usuarios.Verification: Se abre una ventana emergente titulada Matricular usuarios.2.Matricular al profesor:Asignación de rol.En el buscador Seleccionar usuarios, escribe Carlos Mendoza (profesor1) y selecciónalo. En el desplegable Asignar rol, elige Profesor (con permisos de edición). Pulsa Matricular usuarios.Verification: Carlos Mendoza aparece en la lista de participantes con el rol Profesor y estado Activo.3.Matricular a los 10 alumnos:Matriculación en bloque.Vuelve a pulsar Matricular usuarios. En el buscador Seleccionar usuarios, busca y selecciona uno a uno a los 10 alumnos (alumno01 hasta alumno10) para que todos queden añadidos en la barra de selección superior. Comprueba que en Asignar rol esté marcado Estudiante y haz clic en Matricular usuarios seleccionados.Verification: En la pestaña Participantes se listan un total de 11 usuarios activos: 1 profesor y 10 estudiantes.
 
-Captura pantalla de:
+📸 **Captura 8:**
 
 La tabla de Examinar lista de usuarios mostrando los 11 usuarios dados de alta.
 La página principal del curso mostrando los 3 temas renombrados.
