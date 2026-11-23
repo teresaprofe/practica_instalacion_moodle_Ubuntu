@@ -18,15 +18,14 @@
 5. [Parte C: Instalación y configuración de MariaDB](#5-parte-c-instalación-y-configuración-de-mariadb)
 6. [Parte D: Descarga de Moodle y directorios](#6-parte-d-descarga-de-moodle-y-directorios)
 7. [Parte E: Instalación de Moodle](#7-parte-e-instalación-de-moodle)
-9. [Parte F: Configurar un entorno de aprendizaje funcional desde cero:](##8-Parte-F:-Configurar-un-entorno-de-aprendizaje-funcional-desde-cero).
-10. (Parte F: Configurar un entorno de aprendizaje funcional desde cero:)
-11. [Parte G: Verificación y pruebas](#9-parte-g-verificación-y-pruebas)
-12. [Solución de problemas frecuentes](#10-solución-de-problemas-frecuentes)
-13. [Entregables](#11-entregables)
-14. [Preguntas de reflexión](#12-preguntas-de-reflexión)
-15. [Ampliaciones opcionales](#13-ampliaciones-opcionales)
-16. [Criterios de evaluación sugeridos](#14-criterios-de-evaluación-sugeridos)
-17. [Licencia](#15-licencia)
+8. [Parte F: Configurar un entorno de aprendizaje funcional desde cero:](##8-Parte-F:-Configurar-un-entorno-de-aprendizaje-funcional-desde-cero).
+9. [Parte G: Verificación y pruebas](#9-parte-g-verificación-y-pruebas)
+10. [Solución de problemas frecuentes](#10-solución-de-problemas-frecuentes)
+11. [Entregables](#11-entregables)
+12. [Preguntas de reflexión](#12-preguntas-de-reflexión)
+13. [Ampliaciones opcionales](#13-ampliaciones-opcionales)
+14. [Criterios de evaluación sugeridos](#14-criterios-de-evaluación-sugeridos)
+15. [Licencia](#15-licencia)
 
 ## 1. Objetivos
 
