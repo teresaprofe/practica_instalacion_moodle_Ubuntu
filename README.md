@@ -302,7 +302,6 @@ Entrega un informe en PDF que incluya los siguientes apartados con su índice y 
 
 1. ¿Por qué el directorio `moodledata` debe estar fuera del directorio web?
 2. ¿Por qué se recomienda que el código de Moodle no sea escribible por el usuario del servidor web una vez instalado?
-3. ¿Qué función cumple el cron en Moodle y qué ocurre si no está configurado?
 4. ¿Qué has aprendido con esta práctica?
 
 
